@@ -11,15 +11,15 @@ class WeatherListInteractor: WeatherListPresenterToInteractorProtocol{
     private let disposeBag = DisposeBag()
     
     func WeatherList() {
-        let list = webService.load(modelType: WeatherListResponse.self, from: .weather(serviceType: .list(term: DynamicVariables.Networking.Url.item_search)))
-            list.observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] (results) in
-                results.validate {
-                    self?.presenter?.fetchedWeatherListDataSuccess(results)
-                }
-                }, onError: { [weak self] (error) in
-                    self?.presenter?.fetchedWeatherListDataFailed(error)
-            }).disposed(by: disposeBag)
+//        let list = webService.load(modelType: WeatherListResponse.self, from: .weather(serviceType: .list(term: DynamicVariables.Networking.Url.item_search)))
+//            list.observeOn(MainScheduler.instance)
+//            .subscribe(onNext: { [weak self] (results) in
+//                results.validate {
+//                    self?.presenter?.fetchedWeatherListDataSuccess(results)
+//                }
+//                }, onError: { [weak self] (error) in
+//                    self?.presenter?.fetchedWeatherListDataFailed(error)
+//            }).disposed(by: disposeBag)
     }
     
     func search(withInfo: String) {

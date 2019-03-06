@@ -27,6 +27,7 @@
 		2058B4B121FF9CB8009E07B1 /* SingletonMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2058B4B021FF9CB8009E07B1 /* SingletonMusic.swift */; };
 		20A8E92E21F4CC72001827CC /* WeatherListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A8E92D21F4CC72001827CC /* WeatherListViewController.xib */; };
 		20A8E93421F4CE3D001827CC /* MusicListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8E93321F4CE3D001827CC /* MusicListTableViewCell.swift */; };
+		20B7BD0F22301A92008AB621 /* CurrentWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7BD0E22301A92008AB621 /* CurrentWeatherResponse.swift */; };
 		20E408FF2213090E00CE1BE0 /* UiViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E408FE2213090E00CE1BE0 /* UiViewControllerExtension.swift */; };
 		20E6788D21E9131700C2CBF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E6788C21E9131700C2CBF5 /* AppDelegate.swift */; };
 		20E6789421E9131700C2CBF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E6789321E9131700C2CBF5 /* Assets.xcassets */; };
@@ -90,6 +91,7 @@
 		2058B4B021FF9CB8009E07B1 /* SingletonMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonMusic.swift; sourceTree = "<group>"; };
 		20A8E92D21F4CC72001827CC /* WeatherListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherListViewController.xib; sourceTree = "<group>"; };
 		20A8E93321F4CE3D001827CC /* MusicListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListTableViewCell.swift; sourceTree = "<group>"; };
+		20B7BD0E22301A92008AB621 /* CurrentWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherResponse.swift; sourceTree = "<group>"; };
 		20E408FE2213090E00CE1BE0 /* UiViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtension.swift; sourceTree = "<group>"; };
 		20E6788921E9131700C2CBF5 /* weatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E6788C21E9131700C2CBF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				202E96EF21F8C3200053F514 /* WeatherListResponse.swift */,
+				20B7BD0E22301A92008AB621 /* CurrentWeatherResponse.swift */,
 			);
 			path = Reports;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				202E970121F8D9E30053F514 /* GenericPersistent.swift in Sources */,
 				20E678C521E93A6E00C2CBF5 /* MainEntities.swift in Sources */,
 				202E96F921F8CAB50053F514 /* Endpoint.swift in Sources */,
+				20B7BD0F22301A92008AB621 /* CurrentWeatherResponse.swift in Sources */,
 				20E408FF2213090E00CE1BE0 /* UiViewControllerExtension.swift in Sources */,
 				20E6788D21E9131700C2CBF5 /* AppDelegate.swift in Sources */,
 				202E96FF21F8D9B10053F514 /* PersistentData.swift in Sources */,

@@ -10,11 +10,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let navigationController = NavigationBar()
-        
         let main = MainRouter.createModule()
         navigationController.viewControllers = [main]
         PersistentData.shared.baseURL.value = Constants.Network.base_url
-        DynamicVariables.Networking.Url.item_search = Constants.Network.default_search
+        DynamicVariables.Networking.Url.item_search = Constants.Network.default_city
+        PersistentData.shared.apiKey.value = Constants.Network.apikey
+        PersistentData.shared.celcius.value = Constants.Network.celicus
 
         window = UIWindow(frame: UIScreen.main.bounds);
         window?.rootViewController = navigationController

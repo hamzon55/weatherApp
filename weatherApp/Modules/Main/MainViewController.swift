@@ -6,10 +6,12 @@ class MainViewController: UIViewController {
     
     var presenter: MainViewToPresenterProtocol?
     
+    @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.updateView()
         self.startButton.setTitle("mainbutton_title".localized(), for: .normal)
 
     }

@@ -13,11 +13,7 @@ internal enum WebServiceError: Error {
 private struct Status: Decodable {
     let code: Int
     let message: String
-    
-    enum CodingKeys: String, CodingKey {
-        case code = "status_code"
-        case message = "status_message"
-    }
+
 }
 
 extension Decodable {

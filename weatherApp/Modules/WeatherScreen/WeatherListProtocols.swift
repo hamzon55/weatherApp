@@ -17,7 +17,6 @@ protocol WeatherListPresenterToInteractorProtocol: class{
     var presenter: WeatherListInteractorToPresenterProtocol? {get set}
     func WeatherList()
     func search(withInfo: String)
-
 }
 
 protocol WeatherListViewToPresenterProtocol: class{

@@ -13,34 +13,56 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="viperProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="weatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nY-tC-FxP">
-                                <rect key="frame" x="147" y="318" width="80" height="30"/>
+                                <rect key="frame" x="147" y="575" width="80" height="30"/>
                                 <state key="normal" title="NextScreen"/>
                                 <connections>
                                     <action selector="onStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uhd-Qe-coI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-wA-QN9">
+                                <rect key="frame" x="89" y="323" width="197" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actual Temperature :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0E-XZ-bpw">
+                                <rect key="frame" x="108" y="270" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fAe-wA-QN9" secondAttribute="trailing" constant="89" id="76O-bg-bCd"/>
+                            <constraint firstItem="0nY-tC-FxP" firstAttribute="top" secondItem="fAe-wA-QN9" secondAttribute="bottom" constant="209" id="FRF-CW-khO"/>
+                            <constraint firstItem="p0E-XZ-bpw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="HAs-8t-CKT"/>
                             <constraint firstItem="0nY-tC-FxP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="MNM-yx-jT5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0nY-tC-FxP" secondAttribute="bottom" constant="319" id="bXM-R0-1QN"/>
+                            <constraint firstItem="p0E-XZ-bpw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="OAX-TL-mjU"/>
+                            <constraint firstItem="fAe-wA-QN9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="SKB-iN-bf5"/>
+                            <constraint firstItem="fAe-wA-QN9" firstAttribute="top" secondItem="p0E-XZ-bpw" secondAttribute="bottom" constant="32" id="XVz-sp-Crp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p0E-XZ-bpw" secondAttribute="trailing" constant="108" id="bI3-qW-t6p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0nY-tC-FxP" secondAttribute="bottom" constant="62" id="bXM-R0-1QN"/>
+                            <constraint firstItem="fAe-wA-QN9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="hCF-Jt-qiK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0nY-tC-FxP" secondAttribute="trailing" constant="148" id="jsh-ay-5iq"/>
-                            <constraint firstItem="0nY-tC-FxP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="uv7-xL-CzW"/>
+                            <constraint firstItem="0nY-tC-FxP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="555" id="uv7-xL-CzW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="startButton" destination="0nY-tC-FxP" id="zy8-Tl-N3K"/>
+                        <outlet property="temp" destination="fAe-wA-QN9" id="g3O-5a-q49"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>

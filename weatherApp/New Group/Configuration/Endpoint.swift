@@ -4,7 +4,7 @@ import Foundation
 
 internal enum Endpoint {
     
-    case weather(serviceType: WeatherService)
+    case WeatherCurrent(serviceType: WeatherService)
 }
 
 protocol Requestable {
@@ -82,7 +82,7 @@ enum HTTPMethod: String {
 private extension Endpoint {
     var properties: Requestable {
         switch self {
-        case .weather(let serviceType):
+        case .WeatherCurrent(let serviceType):
             return WeatherNetworkFactory.getService(from: serviceType)
     }
 }

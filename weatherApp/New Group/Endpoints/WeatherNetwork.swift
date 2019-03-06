@@ -3,15 +3,15 @@
 import Foundation
 
 enum WeatherService: ServiceEnum {
-    case list(term: String)
+    case current(city: String)
 }
 
 struct WeatherNetworkFactory: Networking {
     typealias EnumType = WeatherService
     static func getService(from type: EnumType) -> Requestable {
         switch type {
-        case .list(let term):
-            return WeatherNetwork(term)
+        case .current(let city):
+            return WeatherNetwork(city)
     
         }
     }
@@ -20,17 +20,23 @@ struct WeatherNetworkFactory: Networking {
 extension WeatherNetworkFactory {
     
     private struct WeatherNetwork: Requestable {
-        private var term: String
+        private var city: String
+        private var api_key: String
+        private var celcius: String
         var method: HTTPMethod = .get
         var path: String = ""
         var parameters: [String : Any] {
             return [
-                "term": "\(term)"
+                "q": city,
+                "appid": api_key,
+                "units": celcius
             ]
         }
         
-        init(_ term: String){
-           self.term = term
+        init(_ city: String){
+            self.city = city
+            self.api_key = PersistentData.shared.apiKey.value
+            self.celcius = PersistentData.shared.celcius.value
         }
     }
 }
