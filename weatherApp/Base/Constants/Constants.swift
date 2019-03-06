@@ -9,7 +9,8 @@ struct Constants {
         static let base_url = "https://api.openweathermap.org/data/2.5/weather"
         static let default_city = "Barcelona"
         static let apikey = "910f5ea26bec82460f30f8f815923218"
-        static let celicus = "metric"
+        static let default_metric = "metric"
+        static let fore = "https://api.openweathermap.org/data/2.5/weather"
     }
 }
 

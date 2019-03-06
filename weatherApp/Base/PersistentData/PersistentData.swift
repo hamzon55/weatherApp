@@ -5,7 +5,7 @@ import Foundation
 private enum Keys: String {
     case baseURL
     case apiKey
-    case celcius
+    case metric
 }
 
 final class PersistentData {
@@ -14,5 +14,5 @@ final class PersistentData {
     
     var baseURL = Persistent<String>(Keys.baseURL.rawValue)
     var apiKey = Persistent<String>(Keys.apiKey.rawValue)
-    var celcius = Persistent<String>(Keys.celcius.rawValue)
+    var celcius = Persistent<String>(Keys.metric.rawValue)
 }
