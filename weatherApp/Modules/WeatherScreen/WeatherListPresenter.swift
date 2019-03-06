@@ -34,7 +34,7 @@ extension WeatherListPresenter: WeatherListInteractorToPresenterProtocol {
     func fetchedWeatherListDataSuccess(_ model: WeatherListResponse?) {
         guard let list = model else { return }
         data = [list]
-        tableDataSource = WeatherListTableDataSource(data: [list])
+        tableDataSource = WeatherListTableDataSource(data: list.list)
         view?.tableView.dataSource = tableDataSource
         view?.tableView.reloadData()
         hideLoader()

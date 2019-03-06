@@ -4,8 +4,8 @@ import UIKit
 
 final class WeatherListTableDataSource: NSObject, UITableViewDataSource {
     
-    var data :[WeatherListResponse]?
-    convenience init(data: [WeatherListResponse]) {
+    var data :[ListWeather]?
+    convenience init(data: [ListWeather]) {
         self.init()
         self.data = data
     }
@@ -22,7 +22,7 @@ final class WeatherListTableDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherListTableViewCell.cellType, for: indexPath) as? WeatherListTableViewCell
             else{ return UITableViewCell()}
-        cell.displayCell(weather: data![indexPath.row])
+        cell.displayCell(weather: data![indexPath.row].main)
         return cell
     }
     

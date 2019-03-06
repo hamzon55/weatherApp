@@ -6,15 +6,6 @@ struct WeatherListResponse: Decodable {
     let city: City
 }
 
-
-//struct WeatherData: Decodable {
-//    let results: [Marvel]?
-//}
-//
-//struct WeatherResponse: Decodable {
-//    let data: CharacterData
-//}
-
 struct City: Decodable {
     let id: Int
     let name: String

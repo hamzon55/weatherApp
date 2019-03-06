@@ -24,17 +24,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJG-fJ-BCI">
+                        <rect key="frame" x="22" y="44" width="107" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="4yg-Kq-iG3" firstAttribute="leading" secondItem="NEO-8K-5wa" secondAttribute="leadingMargin" constant="90" id="7NL-k3-jyL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cJG-fJ-BCI" secondAttribute="trailing" constant="205" id="Out-0h-Yvh"/>
+                    <constraint firstItem="cJG-fJ-BCI" firstAttribute="top" secondItem="NEO-8K-5wa" secondAttribute="topMargin" constant="33" id="YFd-Oq-GJF"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4yg-Kq-iG3" secondAttribute="trailing" constant="52" id="aMs-Cc-2cg"/>
+                    <constraint firstItem="cJG-fJ-BCI" firstAttribute="leading" secondItem="NEO-8K-5wa" secondAttribute="leadingMargin" constant="6" id="cFC-xX-NnY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cJG-fJ-BCI" secondAttribute="bottom" constant="34" id="m7V-oi-LUV"/>
                     <constraint firstItem="4yg-Kq-iG3" firstAttribute="top" secondItem="NEO-8K-5wa" secondAttribute="topMargin" constant="34" id="rYn-e3-OPN"/>
                     <constraint firstAttribute="bottomMargin" secondItem="4yg-Kq-iG3" secondAttribute="bottom" constant="36" id="vrw-sG-WSp"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cellView" destination="NEO-8K-5wa" id="i0P-jo-H2i"/>
-                <outlet property="titleSong" destination="4yg-Kq-iG3" id="YNM-Kb-c5u"/>
+                <outlet property="dayLbl" destination="cJG-fJ-BCI" id="ff2-2u-Lqn"/>
+                <outlet property="foreCastlbl" destination="4yg-Kq-iG3" id="ckU-sW-5KC"/>
             </connections>
             <point key="canvasLocation" x="131.19999999999999" y="50.374812593703155"/>
         </tableViewCell>
