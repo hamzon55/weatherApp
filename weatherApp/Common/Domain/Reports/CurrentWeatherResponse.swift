@@ -5,7 +5,6 @@ struct CurrentWeatherResponse: Decodable {
     let main: Main
     let visibility: Int
     let wind: Wind
-    let rain: RainData
     let clouds: Clouds
     let dt: Int
     let sys: Sys
@@ -25,21 +24,12 @@ struct Coord: Decodable {
 struct Main: Decodable {
     let temp: Double
     let pressure, humidity: Int
-    let tempMin: Double
-    let tempMax: Double
+    let tempMin, tempMax: Double
     
     enum CodingKeys: String, CodingKey {
         case temp, pressure, humidity
         case tempMin = "temp_min"
         case tempMax = "temp_max"
-    }
-}
-
-struct RainData: Decodable {
-    let the1H: Double
-    
-    enum CodingKeys: String, CodingKey {
-        case the1H = "1h"
     }
 }
 
@@ -57,4 +47,5 @@ struct Weather: Decodable {
 
 struct Wind: Decodable {
     let speed: Double
+    let deg: Int
 }

@@ -24,7 +24,6 @@
 		203E30F32200E16200966220 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203E30F22200E16200966220 /* UIApplicationExtension.swift */; };
 		203E30F52201F8FE00966220 /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203E30F42201F8FE00966220 /* TimeIntervalExtension.swift */; };
 		2058B4AF21FF748F009E07B1 /* DynamicVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2058B4AE21FF748F009E07B1 /* DynamicVariables.swift */; };
-		2058B4B121FF9CB8009E07B1 /* SingletonMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2058B4B021FF9CB8009E07B1 /* SingletonMusic.swift */; };
 		20A8E92E21F4CC72001827CC /* WeatherListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A8E92D21F4CC72001827CC /* WeatherListViewController.xib */; };
 		20A8E93421F4CE3D001827CC /* WeatherListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8E93321F4CE3D001827CC /* WeatherListTableViewCell.swift */; };
 		20B7BD0F22301A92008AB621 /* CurrentWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7BD0E22301A92008AB621 /* CurrentWeatherResponse.swift */; };
@@ -89,7 +88,6 @@
 		203E30F22200E16200966220 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		203E30F42201F8FE00966220 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		2058B4AE21FF748F009E07B1 /* DynamicVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicVariables.swift; sourceTree = "<group>"; };
-		2058B4B021FF9CB8009E07B1 /* SingletonMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonMusic.swift; sourceTree = "<group>"; };
 		20A8E92D21F4CC72001827CC /* WeatherListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherListViewController.xib; sourceTree = "<group>"; };
 		20A8E93321F4CE3D001827CC /* WeatherListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewCell.swift; sourceTree = "<group>"; };
 		20B7BD0E22301A92008AB621 /* CurrentWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherResponse.swift; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 				202E96F621F8CA980053F514 /* ServiceProtocols.swift */,
 				202E96F821F8CAB50053F514 /* Endpoint.swift */,
 				202E96FA21F8D9370053F514 /* WebService.swift */,
-				2058B4B021FF9CB8009E07B1 /* SingletonMusic.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -629,7 +626,6 @@
 				202E970521F8DC960053F514 /* UIApplication+TopViewController.swift in Sources */,
 				20E678C721E93AB500C2CBF5 /* MainViewController.swift in Sources */,
 				202E96F721F8CA980053F514 /* ServiceProtocols.swift in Sources */,
-				2058B4B121FF9CB8009E07B1 /* SingletonMusic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

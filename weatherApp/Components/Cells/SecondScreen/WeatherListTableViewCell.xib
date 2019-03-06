@@ -44,8 +44,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cellView" destination="NEO-8K-5wa" id="i0P-jo-H2i"/>
-                <outlet property="dayLbl" destination="cJG-fJ-BCI" id="ff2-2u-Lqn"/>
                 <outlet property="foreCastlbl" destination="4yg-Kq-iG3" id="ckU-sW-5KC"/>
+                <outlet property="tempLbl" destination="cJG-fJ-BCI" id="fkj-oq-dTr"/>
             </connections>
             <point key="canvasLocation" x="131.19999999999999" y="50.374812593703155"/>
         </tableViewCell>

@@ -4,6 +4,7 @@ import UIKit
 
 class MainPresenter: MainViewToPresenterProtocol {
     func updateView() {
+        BindLocalizedLabels()
         interactor?.currentWeather()
     }
     
@@ -17,6 +18,11 @@ class MainPresenter: MainViewToPresenterProtocol {
         guard let vc = view as? UIViewController else { return }
         router?.navigateToNextScreen(origin: vc)
     }
+    
+    func BindLocalizedLabels(){
+        view?.startButton?.setTitle("temperature_label".localized(), for: .normal)
+        view?.actualTemp?.text = "actual_temperature".localized()
+    }
 }
 
 extension MainPresenter: MainInteractorToPresenterProtocol {
@@ -29,6 +35,4 @@ extension MainPresenter: MainInteractorToPresenterProtocol {
     func fetchedWeatherDataFailed(_ error: Error) {
         
     }
-    
-    
 }

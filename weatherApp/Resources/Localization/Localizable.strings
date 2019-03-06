@@ -1,2 +1,4 @@
 
 "mainbutton_title" = "ForeCast";
+"temperature_label" = "Temperature";
+"actual_temperature" = "Actual Temperature";

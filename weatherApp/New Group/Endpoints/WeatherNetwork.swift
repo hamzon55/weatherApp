@@ -37,7 +37,6 @@ extension WeatherNetworkFactory {
                 "units": unit
             ]
         }
-        
         init(_ city: String, _ country_code: String){
             self.city = city
             self.country_code = country_code
@@ -45,9 +44,6 @@ extension WeatherNetworkFactory {
             self.unit = PersistentData.shared.unit.value
         }
     }
-    
-    
-    
 }
 
 

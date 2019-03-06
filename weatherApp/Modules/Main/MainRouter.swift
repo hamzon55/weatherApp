@@ -17,13 +17,10 @@ class MainRouter: MainPresenterToRouterProtocol{
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
-        
         return view
     }
     
     func navigateToNextScreen(origin: UIViewController){
-        
-        guard let navigationController = origin.navigationController as? NavigationBar else {return}
-        navigationController.setViewControllers([WeatherListRouter.createModule()], animated: true)
+    origin.navigationController?.pushViewController(WeatherListRouter.createModule(), animated: true)
     }
 }

@@ -4,6 +4,9 @@ import UIKit
 
 protocol MainPresenterToViewProtocol: class{
     var temp: UILabel! {get set}
+    var actualTemp: UILabel! {get set}
+
+    var startButton: UIButton! {get set}
 }
 
 protocol MainInteractorToPresenterProtocol: class{

@@ -6,6 +6,7 @@ class MainViewController: UIViewController {
     
     var presenter: MainViewToPresenterProtocol?
     
+    @IBOutlet weak var actualTemp: UILabel!
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var startButton: UIButton!
     
@@ -13,7 +14,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         presenter?.updateView()
         self.startButton.setTitle("mainbutton_title".localized(), for: .normal)
-
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,5 +29,7 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: MainPresenterToViewProtocol {
+
+    
     
 }

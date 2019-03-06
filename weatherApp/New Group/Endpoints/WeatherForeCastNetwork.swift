@@ -41,9 +41,6 @@ extension WeatherForeCastNetworkFactory {
             self.unit  = PersistentData.shared.unit.value
         }
     }
-    
-    
-    
 }
 
 
