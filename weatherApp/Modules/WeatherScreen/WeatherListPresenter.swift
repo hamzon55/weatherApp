@@ -7,8 +7,8 @@ class WeatherListPresenter: WeatherListViewToPresenterProtocol {
     var view: WeatherListPresenterToViewProtocol?
     var interactor: WeatherListPresenterToInteractorProtocol?
     var router: WeatherListPresenterToRouterProtocol?
-    
-    private var data = SingletonWeather.sharedInstance.resultsArray
+
+     private var data : [WeatherListResponse] = []
     private lazy var tableDelegate: WeatherListTableDelegate = {
         return WeatherListTableDelegate(actionDelegate: self )
     }()
@@ -30,11 +30,11 @@ class WeatherListPresenter: WeatherListViewToPresenterProtocol {
 }
 
 extension WeatherListPresenter: WeatherListInteractorToPresenterProtocol {
-    func fetchedWeatherListDataSuccess(_ model: WeatherListResponse) {
-        guard let list = model.results else { return }
-        data = list
-        SingletonWeather.sharedInstance.resultsArray = list
-        tableDataSource = WeatherListTableDataSource(data: list)
+   
+    func fetchedWeatherListDataSuccess(_ model: WeatherListResponse?) {
+        guard let list = model else { return }
+        data = [list]
+        tableDataSource = WeatherListTableDataSource(data: [list])
         view?.tableView.dataSource = tableDataSource
         view?.tableView.reloadData()
         hideLoader()

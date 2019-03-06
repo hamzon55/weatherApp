@@ -4,8 +4,8 @@ import UIKit
 
 final class WeatherListTableDataSource: NSObject, UITableViewDataSource {
     
-    var data :[WeatherResultsList]?
-    convenience init(data: [WeatherResultsList]) {
+    var data :[WeatherListResponse]?
+    convenience init(data: [WeatherListResponse]) {
         self.init()
         self.data = data
     }

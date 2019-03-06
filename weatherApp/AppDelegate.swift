@@ -13,9 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let main = MainRouter.createModule()
         navigationController.viewControllers = [main]
         PersistentData.shared.baseURL.value = Constants.Network.base_url
-        DynamicVariables.Networking.Url.item_search = Constants.Network.default_city
+        DynamicVariables.Networking.Url.city = Constants.Network.default_city
+        DynamicVariables.Networking.Url.countyCode = Constants.Network.default_countryCode
         PersistentData.shared.apiKey.value = Constants.Network.apikey
-        PersistentData.shared.celcius.value = Constants.Network.default_metric
+        PersistentData.shared.unit.value = Constants.Network.default_unit
 
         window = UIWindow(frame: UIScreen.main.bounds);
         window?.rootViewController = navigationController

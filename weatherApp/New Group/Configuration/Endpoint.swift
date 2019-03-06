@@ -5,6 +5,8 @@ import Foundation
 internal enum Endpoint {
     
     case WeatherCurrent(serviceType: WeatherService)
+    case WeatherForecast(serviceType: WeatherForeCastService)
+
 }
 
 protocol Requestable {
@@ -28,7 +30,6 @@ internal extension Endpoint {
     
         
         let url = baseURL.appendingPathComponent(properties.path)
-        
         var newParameters = properties.parameters
         properties.parameters.forEach { newParameters.updateValue($1, forKey: $0) }
         
@@ -84,6 +85,9 @@ private extension Endpoint {
         switch self {
         case .WeatherCurrent(let serviceType):
             return WeatherNetworkFactory.getService(from: serviceType)
-    }
+        case .WeatherForecast(let serviceType):
+            return WeatherForeCastNetworkFactory.getService(from: serviceType)
+
+        }
 }
 }

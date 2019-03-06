@@ -8,7 +8,7 @@ protocol WeatherListPresenterToViewProtocol: class{
 }
 
 protocol WeatherListInteractorToPresenterProtocol: class{
-    func fetchedWeatherListDataSuccess(_ model: WeatherListResponse)
+    func fetchedWeatherListDataSuccess(_ model: WeatherListResponse?)
     func fetchedWeatherListDataFailed(_ error: Error)
 
 }

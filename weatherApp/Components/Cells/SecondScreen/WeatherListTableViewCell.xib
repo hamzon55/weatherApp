@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Nj3-D4-AFc" userLabel="Weather List Table View Cell" customClass="WeatherListTableViewCell" customModule="weatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nj3-D4-AFc" id="NEO-8K-5wa">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yg-Kq-iG3">
+                        <rect key="frame" x="106" y="45" width="176" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4yg-Kq-iG3" firstAttribute="leading" secondItem="NEO-8K-5wa" secondAttribute="leadingMargin" constant="90" id="7NL-k3-jyL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4yg-Kq-iG3" secondAttribute="trailing" constant="52" id="aMs-Cc-2cg"/>
+                    <constraint firstItem="4yg-Kq-iG3" firstAttribute="top" secondItem="NEO-8K-5wa" secondAttribute="topMargin" constant="34" id="rYn-e3-OPN"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4yg-Kq-iG3" secondAttribute="bottom" constant="36" id="vrw-sG-WSp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellView" destination="NEO-8K-5wa" id="i0P-jo-H2i"/>
+                <outlet property="titleSong" destination="4yg-Kq-iG3" id="YNM-Kb-c5u"/>
+            </connections>
+            <point key="canvasLocation" x="131.19999999999999" y="50.374812593703155"/>
+        </tableViewCell>
+    </objects>
+</document>

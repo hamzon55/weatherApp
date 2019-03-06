@@ -6,6 +6,8 @@ private enum Keys: String {
     case baseURL
     case apiKey
     case metric
+    case forectast
+    
 }
 
 final class PersistentData {
@@ -14,5 +16,6 @@ final class PersistentData {
     
     var baseURL = Persistent<String>(Keys.baseURL.rawValue)
     var apiKey = Persistent<String>(Keys.apiKey.rawValue)
-    var celcius = Persistent<String>(Keys.metric.rawValue)
+    var unit = Persistent<String>(Keys.metric.rawValue)
+    var forecastURL = Persistent<String>(Keys.forectast.rawValue)
 }

@@ -1,35 +1,31 @@
 
 
+
 import Foundation
 
-enum WeatherService: ServiceEnum {
-    case current(city: String,country_code: String)
+enum WeatherForeCastService: ServiceEnum {
     case list(city: String,country_code: String)
 }
 
-struct WeatherNetworkFactory: Networking {
-    typealias EnumType = WeatherService
+struct WeatherForeCastNetworkFactory: Networking {
+    typealias EnumType = WeatherForeCastService
     static func getService(from type: EnumType) -> Requestable {
         switch type {
-        case .current(let city, let country_code):
-            
-            return WeatherNetwork(city, country_code)
-    
         case .list(let city, let coutry_Code):
-            return WeatherNetwork(city, coutry_Code)
+            return WeatherForeCastNetwork(city, coutry_Code)
         }
     }
 }
 
-extension WeatherNetworkFactory {
+extension WeatherForeCastNetworkFactory {
     
-    private struct WeatherNetwork: Requestable {
+    private struct WeatherForeCastNetwork: Requestable {
         private var city: String
         private var api_key: String
         private var unit: String
         private var country_code: String
         var method: HTTPMethod = .get
-        var path: String = "weather"
+        var path: String = "forecast"
         var parameters: [String : Any] {
             return [
                 "q": city+","+country_code,
@@ -42,7 +38,7 @@ extension WeatherNetworkFactory {
             self.city = city
             self.country_code = country_code
             self.api_key = PersistentData.shared.apiKey.value
-            self.unit = PersistentData.shared.unit.value
+            self.unit  = PersistentData.shared.unit.value
         }
     }
     

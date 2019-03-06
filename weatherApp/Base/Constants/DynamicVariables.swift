@@ -6,7 +6,9 @@ import Foundation
 struct DynamicVariables{
     struct Networking {
         struct Url {
-            static var item_search = ""
+            static var city = ""
+            static var countyCode = ""
+            static var units = ""
 }
     }
     

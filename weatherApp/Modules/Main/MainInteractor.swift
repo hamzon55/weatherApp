@@ -12,7 +12,7 @@ class MainInteractor: MainPresenterToInteractorProtocol {
     
     func currentWeather() {
         let list = webService.load(modelType: CurrentWeatherResponse.self,from:
-            .WeatherCurrent(serviceType: .current(city: DynamicVariables.Networking.Url.item_search)))
+            .WeatherCurrent(serviceType: .current(city: DynamicVariables.Networking.Url.city, country_code: DynamicVariables.Networking.Url.countyCode)))
         list.observeOn(MainScheduler.instance)
         .subscribe(onNext: { [weak self] (results) in
             results.validate {

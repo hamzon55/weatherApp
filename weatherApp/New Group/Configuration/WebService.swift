@@ -32,6 +32,7 @@ final internal class WebService {
             return URL(string: Constants.Network.base_url)!
         }
     }()
+    
     private let decoder = JSONDecoder()
     
     init() {
@@ -58,7 +59,6 @@ final internal class WebService {
                 guard let status = try? decoder.decode(Status.self, from: data) else {
                     throw error
                 }
-                
                 throw WebServiceError.api(status.code, status.message)
         }
     }
@@ -87,7 +87,6 @@ private extension Reactive where Base: URLSession {
             }
             
             task.resume()
-            
             return Disposables.create {
                 task.cancel()
             }
