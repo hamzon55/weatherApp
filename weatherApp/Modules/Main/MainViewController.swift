@@ -9,7 +9,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var actualTemp: UILabel!
     @IBOutlet weak var temp: UILabel!
     @IBOutlet weak var startButton: UIButton!
-    
+    @IBOutlet weak var city: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.updateView()

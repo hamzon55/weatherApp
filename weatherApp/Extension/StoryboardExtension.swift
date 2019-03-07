@@ -4,7 +4,7 @@ import UIKit
 
 enum Storyboard : String {
     case MainViewController
-    case SecondScreenViewController
+    case WeatherCellViewController
     
     func instantiateViewController<T>() -> T where T: StoryboardIdentifiable {
         let sb = UIStoryboard(storyboard: self)

@@ -160,7 +160,7 @@
 		202E96BF21F5D1AB0053F514 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				20A8E93021F4CCA8001827CC /* SecondScreen */,
+				20A8E93021F4CCA8001827CC /* WeatherCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -271,13 +271,13 @@
 			path = Table;
 			sourceTree = "<group>";
 		};
-		20A8E93021F4CCA8001827CC /* SecondScreen */ = {
+		20A8E93021F4CCA8001827CC /* WeatherCell */ = {
 			isa = PBXGroup;
 			children = (
 				20A8E93321F4CE3D001827CC /* WeatherListTableViewCell.swift */,
 				202E96C221F5F2750053F514 /* WeatherListTableViewCell.xib */,
 			);
-			path = SecondScreen;
+			path = WeatherCell;
 			sourceTree = "<group>";
 		};
 		20E6788021E9131700C2CBF5 = {

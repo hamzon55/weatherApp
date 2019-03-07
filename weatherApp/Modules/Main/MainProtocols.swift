@@ -5,7 +5,7 @@ import UIKit
 protocol MainPresenterToViewProtocol: class{
     var temp: UILabel! {get set}
     var actualTemp: UILabel! {get set}
-
+    var city: UILabel! {get set}
     var startButton: UIButton! {get set}
 }
 

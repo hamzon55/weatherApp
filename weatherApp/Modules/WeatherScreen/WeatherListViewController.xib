@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondScreenViewController" customModule="weatherApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherListViewController" customModule="weatherApp" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="fR0-o6-2i9" id="6RD-Ze-yJC"/>
                 <outlet property="view" destination="iN0-l3-epB" id="dvr-gz-CWm"/>

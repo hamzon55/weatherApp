@@ -30,6 +30,7 @@ extension MainPresenter: MainInteractorToPresenterProtocol {
         guard let result = model else { return }
         data = result
         view?.temp.text = String(data.main.temp)
+        view?.city.text = data.name
     }
     
     func fetchedWeatherDataFailed(_ error: Error) {
